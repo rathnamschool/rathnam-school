@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rathnam English Medium High School | Yadgir | Admissions 2026</title>
+    
+    <meta name="description" content="Rathnam English Medium High School in Yadgir, Karnataka. Quality education, modern labs, and secure transport for Grade 1-10. Admissions open 2026-27.">
+    <meta name="keywords" content="Rathnam School Yadgir, Best school in Yadgir, English Medium School Karnataka, Admissions 2026">
+    <meta name="author" content="Rathnam High School">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #003366; 
+            --accent: #D4AF37;  
+            --text: #333;
+            --light: #f4f7f6;
+            --whatsapp: #25D366;
+            --footer: #001a33;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .school-logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 65vh;
+            background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), 
+                        url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 10%;
+        }
+
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; }
+
+        /* --- Section Styling --- */
+        section { padding: 80px 10%; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); text-align: center; margin-bottom: 15px; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; }
+
+        /* --- Gallery Section --- */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .gallery-item {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .gallery-item:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- Facilities --- */
+        .facilities { background: var(--light); }
+        .facility-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .facility-card { padding: 20px; background: white; border-radius: 12px; transition: 0.3s; cursor: pointer; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .facility-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .facility-img { height: 150px; width: 100%; border-radius: 8px; margin-bottom: 15px; object-fit: cover; }
+
+        /* --- Admissions --- */
+        .admissions-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: #fff; }
+        .form-side { background: var(--light); padding: 40px; border-radius: 15px; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0 20px 0; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; }
+        .submit-btn { width: 100%; padding: 15px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: var(--primary); }
+
+        /* --- Footer --- */
+        footer { background: var(--footer); color: #ccc; padding: 60px 10% 20px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: white; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+        .footer-col p, .footer-col a { color: #ccc; text-decoration: none; margin-bottom: 10px; display: block; }
+        .map-container { width: 100%; height: 150px; background: #222; border-radius: 8px; overflow: hidden; }
+
+        /* --- Floating Contact --- */
+        .floating-contact { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
+        .float-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; color: white; font-size: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s; }
+        .float-btn.whatsapp { background: var(--whatsapp); }
+        .float-btn.call { background: var(--primary); }
+
+        /* --- Modal --- */
+        #facilityModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; justify-content: center; align-items: center; padding: 20px; }
+        .modal-content { background: white; padding: 40px; border-radius: 15px; max-width: 500px; width: 90%; position: relative; }
+        .close-modal { position: absolute; top: 10px; right: 20px; font-size: 30px; cursor: pointer; }
+        #modalBody ul { padding-left: 20px; margin-top: 15px; }
+        #modalBody li { margin-bottom: 8px; }
+
+        @media (max-width: 768px) { 
+            .admissions-container { grid-template-columns: 1fr; } 
+            .hero h1 { font-size: 2.5rem; }
+            .logo-text { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo-container">
+            <img src="C:\Users\vishwas.vidyasagar\Documents\Rathnam\Logo.png" alt="Rathnam School Logo" class="school-logo-img">
+            <span class="logo-text">Rathnam English Medium<br>High School</span>
+        </a>
+        <a href="#apply" style="background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 50px; font-size: 0.8rem; font-weight: 600;">ENROLL NOW</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Building Future Leaders</h1>
+        <p>A premier English Medium institution in Yadgir district committed to academic excellence and character building.</p>
+    </header>
+
+    <section>
+        <h2 class="section-title">Life at Rathnam</h2>
+        <p class="section-subtitle">Glimpses of our vibrant campus and student activities.</p>
+        <div class="gallery-container">
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=60');" title="Science Exhibition"></div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=60');" title="Modern Classroom"></div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=500&q=60');" title="Sports Day"></div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&w=500&q=60');" title="Library Session"></div>
+        </div>
+    </section>
+
+    <section class="facilities">
+        <h2 class="section-title">World Class Facilities</h2>
+        <div class="facility-grid">
+            <div class="facility-card" onclick="openModal('labs')">
+                <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=500&q=60" class="facility-img" alt="Science Lab">
+                <h3>Smart Labs</h3>
+                <p><small>View Equipment List</small></p>
+            </div>
+
+            <div class="facility-card" onclick="openModal('transport')">
+                <img src="https://images.unsplash.com/photo-1556611657-07404a395982?auto=format&fit=crop&w=500&q=60" class="facility-img" alt="School Bus">
+                <h3>Secure Transport</h3>
+                <p><small>View Route Map</small></p>
+            </div>
+
+            <div class="facility-card" onclick="openModal('library')">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=60" class="facility-img" alt="Library">
+                <h3>E-Library</h3>
+                <p><small>View Collection</small></p>
+            </div>
+
+            <div class="facility-card" onclick="openModal('sports')">
+                <img src="https://images.unsplash.com/photo-1587280501635-a19de238a81e?auto=format&fit=crop&w=500&q=60" class="facility-img" alt="Sports Ground">
+                <h3>Sports Academy</h3>
+                <p><small>View Activities</small></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="admissions-container" id="apply">
+        <div class="info-side">
+            <h2 class="section-title" style="text-align: left;">Admissions 2026-27</h2>
+            <p>Secure your child's future today. Our admissions process is simple and transparent.</p>
+            <ul style="padding-left: 20px;">
+                <li>State-of-the-art STEM curriculum</li>
+                <li>Focus on communication and soft skills</li>
+                <li>Safe and inclusive environment</li>
+            </ul>
+        </div>
+        <div class="form-side">
+            <form id="inquiryForm">
+                <input type="text" id="parentName" placeholder="Parent Name" required>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" required pattern="[0-9]{10}">
+                <select id="selectedClass">
+                    <option value="Primary (1-5)">Class 1 - 5 (Primary)</option>
+                    <option value="High School (6-10)">Class 6 - 10 (High School)</option>
+                </select>
+                <button type="submit" class="submit-btn" id="submitBtn">Get School Prospectus</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>Rathnam English Medium High School<br>Hosalli Cross, Yadgir, Karnataka - 585202</p>
+                <div class="map-container">
+                    <div style="padding: 20px; color: #555; text-align: center;">Google Map Integration Area</div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Reach Out</h4>
+                <p>📞 +91 00000 00000</p>
+                <p>✉️ office@rathnamschool.com</p>
+                <a href="#">https://www.facebook.com/share/189Atqcnag/?mibextid=wwXIfr</a><br>
+                <a href="#">Instagram Profile</a>
+            </div>
+            <div class="footer-col">
+                <h4>Working Hours</h4>
+                <p>Mon - Sat: 8:30 AM - 3:30 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #111; padding-top: 20px; font-size: 0.8rem;">
+            &copy; 2026 Rathnam English Medium High School. Designed for Excellence.
+        </div>
+    </footer>
+
+    <div id="facilityModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color:var(--primary)"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="floating-contact">
+        <a href="https://wa.me/910000000000" class="float-btn whatsapp">💬</a>
+        <a href="tel:+910000000000" class="float-btn call">📞</a>
+    </div>
+
+    <script>
+        const data = {
+            labs: { 
+                title: "Smart Science & Tech Labs", 
+                body: "<ul><li>Modern Physics, Chemistry, and Biology kits</li><li>Computer Lab with high-speed internet</li><li>Safety-first design with expert supervisors</li><li>Smart Boards for visual learning</li></ul>" 
+            },
+            transport: { 
+                title: "Safe Transport Services", 
+                body: "<ul><li>CCTV & GPS tracked school bus fleet</li><li>Highly trained drivers and bus attendents</li><li>Covers all major localities in Yadgir</li><li>Emergency alert system for parents</li></ul>" 
+            },
+            library: { 
+                title: "Comprehensive E-Library", 
+                body: "<ul><li>5,000+ books ranging from fiction to reference</li><li>Digital reading tablets for modern research</li><li>Quiet study zones and reading clubs</li><li>Weekly storytelling sessions for primary students</li></ul>" 
+            },
+            sports: { 
+                title: "Sports & Physical Academy", 
+                body: "<ul><li>Professional coaching for Khokho and Football</li><li>Dedicated field for athletics and outdoor sports</li><li>Indoor facility for Chess, Carrom, and Table Tennis</li><li>Annual Inter-school sports meet participation</li></ul>" 
+            }
+        };
+
+        function openModal(key) {
+            document.getElementById('modalTitle').innerText = data[key].title;
+            document.getElementById('modalBody').innerHTML = data[key].body;
+            document.getElementById('facilityModal').style.display = 'flex';
+        }
+
+        function closeModal() { document.getElementById('facilityModal').style.display = 'none'; }
+
+        // --- GOOGLE SHEETS INTEGRATION ---
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx--_7sOLPYEd_2UF6TG72R-Pge8GcruF7qZ1gAzuH5Gjsf4oW4JrGxzRrblUXyY9u-vA/exec'; // <--- PASTE YOUR URL HERE
+
+            const formData = {
+                name: document.getElementById('parentName').value,
+                phone: document.getElementById('phoneNumber').value,
+                className: document.getElementById('selectedClass').value
+            };
+
+            btn.innerText = "Capturing Details...";
+            btn.disabled = true;
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors', 
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                
+				btn.innerText = "Success! Redirecting...";
+				btn.style.background = "#28a745"; // Optional: Change button to green
+        
+				// Redirect to the thank you page after a brief delay
+				setTimeout(() => { 
+				window.location.href = "thank-you.html"; 
+				}, 1000)
+				//alert("Thank you! Details captured successfully. We will contact you soon.");
+                //btn.innerText = "Success!";
+                //document.getElementById('inquiryForm').reset();
+                
+                // Optional: Redirect after success
+                // setTimeout(() => { window.location.href = "thank-you.html"; }, 1500);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert("Submission failed. Please check your connection.");
+                btn.disabled = false;
+                btn.innerText = "Get School Prospectus";
+            });
+        });
+    </script>
+</body>
+</html>
