@@ -206,7 +206,26 @@ footer{background:var(--navy);padding:80px 5% 30px}
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="logo">
-      <div class="logo-badge">R</div>
+      <svg width="44" height="50" viewBox="0 0 88 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c46a"/><stop offset="100%" stop-color="#c9993a"/></linearGradient>
+          <linearGradient id="lgN" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3a6b"/><stop offset="100%" stop-color="#0a1628"/></linearGradient>
+        </defs>
+        <path d="M44,4 L82,18 L82,60 Q82,84 44,96 Q6,84 6,60 L6,18 Z" fill="url(#lgG)"/>
+        <path d="M44,12 L74,24 L74,60 Q74,80 44,90 Q14,80 14,60 L14,24 Z" fill="url(#lgN)"/>
+        <rect x="40" y="8" width="8" height="14" rx="2" fill="#c9993a"/>
+        <path d="M44,8 Q39,1 41,0 Q44,0 44,0 Q44,0 47,0 Q49,1 44,8Z" fill="url(#lgG)"/>
+        <path d="M26,44 Q32,41 38,42 L38,68 Q32,67 26,70Z" fill="none" stroke="#e8c46a" stroke-width="1.8"/>
+        <path d="M38,42 Q44,41 50,44 L50,70 Q44,67 38,68Z" fill="none" stroke="#e8c46a" stroke-width="1.8"/>
+        <line x1="38" y1="42" x2="38" y2="68" stroke="#e8c46a" stroke-width="1.8"/>
+        <path d="M23,68 Q38,73 53,68" fill="none" stroke="#e8c46a" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="28" y1="51" x2="36" y2="51" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
+        <line x1="28" y1="56" x2="36" y2="56" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
+        <line x1="28" y1="61" x2="36" y2="61" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
+        <line x1="40" y1="51" x2="48" y2="51" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
+        <line x1="40" y1="56" x2="48" y2="56" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
+        <line x1="40" y1="61" x2="48" y2="61" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
+      </svg>
       <div class="logo-text">Rathnam English Medium<br><span>High School · Yadgir</span></div>
     </a>
     <div class="nav-links">
@@ -266,14 +285,14 @@ footer{background:var(--navy);padding:80px 5% 30px}
     <div class="about-img-wrap">
       <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" class="about-img" alt="Rathnam School students">
       <div class="about-img-card">
-        <strong>20+</strong>
+        <strong>19+</strong>
         <span>Years of Excellence</span>
       </div>
     </div>
     <div class="about-content">
       <div class="eyebrow">Our Story</div>
       <h2>Educating Hearts &amp; Minds in Yadgir</h2>
-      <p>Located at Hosalli Cross, Yadgir, Rathnam English Medium High School has been the educational cornerstone of this district — offering a state-board curriculum enriched with modern pedagogy, English-first communication, and holistic student development.</p>
+      <p>Located at Hosalli Cross, Yadgir, Rathnam English Medium High School has been the educational cornerstone of this district since 2006 — offering a state-board curriculum enriched with modern pedagogy, English-first communication, and holistic student development from Nursery all the way to Grade 10.</p>
       <p>We believe every child is uniquely gifted. Our mission is to discover that gift, nurture it with care, and send students out as confident, compassionate, and capable citizens.</p>
       <div class="about-pillars">
         <div class="pillar"><div class="pillar-icon">🎯</div><p>Academic Excellence</p></div>
@@ -375,7 +394,7 @@ footer{background:var(--navy);padding:80px 5% 30px}
     </div>
     <div class="testi-card">
       <div class="stars">★★★★★</div>
-      <p>The bus service is very safe and punctual. The GPS tracking gives us real peace of mind. The school's academic standard is excellent — my son scored 92% in the board exams.</p>
+      <p>The bus service is very safe and punctual. The GPS tracking gives us real peace of mind. The school's academic standard is excellent — my son scored 98% in the board exams.</p>
       <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Raju Malagi</div><div class="testi-role">Parent · Grade 10</div></div></div>
     </div>
     <div class="testi-card">
@@ -416,7 +435,9 @@ footer{background:var(--navy);padding:80px 5% 30px}
           <label>Admission For</label>
           <select id="selectedClass">
             <option value="">Select Grade</option>
-            <option value="Preschool">Preschool (Nursery / LKG / UKG)</option>
+            <option value="Nursery">Nursery</option>
+            <option value="LKG">LKG (Lower Kindergarten)</option>
+            <option value="UKG">UKG (Upper Kindergarten)</option>
             <option value="Primary (1-5)">Class 1 – 5 (Primary)</option>
             <option value="High School (6-10)">Class 6 – 10 (High School)</option>
           </select>
@@ -432,8 +453,26 @@ footer{background:var(--navy);padding:80px 5% 30px}
 <footer id="contact">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="logo"><div class="logo-badge">R</div><div class="logo-text" style="color:#fff">Rathnam English Medium<br><span>High School · Yadgir</span></div></div>
-      <p>Building tomorrow's leaders at Yadgir — one student at a time since our founding.</p>
+      <div class="logo">
+        <svg width="36" height="41" viewBox="0 0 88 105" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="fgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c46a"/><stop offset="100%" stop-color="#c9993a"/></linearGradient><linearGradient id="fgN" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3a6b"/><stop offset="100%" stop-color="#0a1628"/></linearGradient></defs>
+          <path d="M44,22 L76,33 L76,68 Q76,88 44,98 Q12,88 12,68 L12,33 Z" fill="url(#fgG)"/>
+          <path d="M44,28 L70,38 L70,68 Q70,85 44,93 Q18,85 18,68 L18,38 Z" fill="url(#fgN)"/>
+          <rect x="41" y="12" width="6" height="14" rx="2" fill="#c9993a"/>
+          <path d="M44,12 Q40,6 41,2 Q44,0 44,0 Q44,0 47,0 Q49,2 44,12Z" fill="url(#fgG)"/>
+          <path d="M26,52 Q32,49 40,50 L40,72 Q32,71 26,74Z" fill="none" stroke="#e8c46a" stroke-width="1.4"/>
+          <path d="M40,50 Q48,49 54,52 L54,74 Q48,71 40,72Z" fill="none" stroke="#e8c46a" stroke-width="1.4"/>
+          <line x1="40" y1="50" x2="40" y2="72" stroke="#e8c46a" stroke-width="2"/>
+          <path d="M23,72 Q40,77 57,72" fill="none" stroke="#e8c46a" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="28" y1="57" x2="38" y2="57" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+          <line x1="28" y1="62" x2="52" y2="62" stroke="#e8c46a" stroke-width="1.4" opacity="0.85"/>
+          <line x1="28" y1="67" x2="38" y2="67" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+          <line x1="42" y1="57" x2="52" y2="57" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+          <line x1="42" y1="67" x2="52" y2="67" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+        </svg>
+        <div class="logo-text" style="color:#fff">Rathnam English Medium<br><span>High School · Yadgir</span></div>
+      </div>
+      <p>Building tomorrow's leaders at Hosalli Cross, Yadgir — one student at a time since our founding.</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/share/189Atqcnag/?mibextid=wwXIfr" target="_blank" class="social-btn" title="Facebook">f</a>
         <a href="#" class="social-btn" title="Instagram">📷</a>
