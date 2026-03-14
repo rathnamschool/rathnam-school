@@ -1,0 +1,70 @@
+<svg width="100%" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="goldG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e8c46a"/>
+    <stop offset="100%" stop-color="#c9993a"/>
+  </linearGradient>
+  <linearGradient id="navyG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a3a6b"/>
+    <stop offset="100%" stop-color="#0a1628"/>
+  </linearGradient>
+  <linearGradient id="shieldG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a3a6b"/>
+    <stop offset="100%" stop-color="#0a1628"/>
+  </linearGradient>
+</defs>
+
+<!-- Background card -->
+<rect x="20" y="20" width="640" height="280" rx="18" fill="#0a1628"/>
+
+<!-- Shield outer (gold) -->
+<path d="M340,48 L394,68 L394,148 Q394,190 340,214 Q286,190 286,148 L286,68 Z" fill="url(#goldG)"/>
+<!-- Shield inner (navy) -->
+<path d="M340,58 L386,76 L386,148 Q386,185 340,207 Q294,185 294,148 L294,76 Z" fill="url(#navyG)"/>
+
+<!-- Open book inside shield -->
+<!-- Left page -->
+<path d="M316,118 Q322,115 330,116 L330,158 Q322,157 316,160 Z" fill="none" stroke="#e8c46a" stroke-width="1.5"/>
+<!-- Right page -->
+<path d="M330,116 Q338,115 344,118 L344,160 Q338,157 330,158 Z" fill="none" stroke="#e8c46a" stroke-width="1.5"/>
+<!-- Book spine — vertical bar of hidden cross (slightly bolder) -->
+<line x1="330" y1="116" x2="330" y2="158" stroke="#e8c46a" stroke-width="2.2"/>
+<!-- Book base -->
+<path d="M313,158 Q330,162 347,158" fill="none" stroke="#e8c46a" stroke-width="1.5" stroke-linecap="round"/>
+
+<!-- Left page lines -->
+<line x1="318" y1="126" x2="328" y2="126" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+<!-- Middle rule spans both pages — horizontal bar of hidden cross -->
+<line x1="318" y1="133" x2="342" y2="133" stroke="#e8c46a" stroke-width="1.5" opacity="0.85"/>
+<line x1="318" y1="140" x2="328" y2="140" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+<line x1="318" y1="147" x2="328" y2="147" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+
+<!-- Right page lines -->
+<line x1="332" y1="126" x2="342" y2="126" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+<line x1="332" y1="140" x2="342" y2="140" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+<line x1="332" y1="147" x2="342" y2="147" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
+
+<!-- Torch / flame above shield -->
+<rect x="336" y="36" width="8" height="16" rx="2" fill="#c9993a"/>
+<!-- Flame -->
+<path d="M340,36 Q335,28 337,22 Q340,17 342,22 Q344,17 345,22 Q348,28 340,36Z" fill="url(#goldG)"/>
+
+<!-- Stars flanking shield -->
+<text x="270" y="142" text-anchor="middle" font-size="11" fill="#e8c46a" opacity="0.7">✦</text>
+<text x="410" y="142" text-anchor="middle" font-size="11" fill="#e8c46a" opacity="0.7">✦</text>
+
+<!-- School name -->
+<text x="340" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#e8c46a" letter-spacing="2">RATHNAM</text>
+
+<!-- Gold rule lines around name -->
+<line x1="120" y1="245" x2="222" y2="245" stroke="#c9993a" stroke-width="0.8" opacity="0.6"/>
+<line x1="458" y1="245" x2="560" y2="245" stroke="#c9993a" stroke-width="0.8" opacity="0.6"/>
+<circle cx="234" cy="245" r="2" fill="#c9993a" opacity="0.7"/>
+<circle cx="446" cy="245" r="2" fill="#c9993a" opacity="0.7"/>
+
+<text x="340" y="262" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="400" fill="#a8b8d0" letter-spacing="3.5">ENGLISH MEDIUM HIGH SCHOOL</text>
+
+<!-- Bottom banner strip -->
+<rect x="176" y="272" width="328" height="18" rx="4" fill="url(#goldG)" opacity="0.12"/>
+<text x="340" y="284" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#e8c46a" letter-spacing="2" opacity="0.85">YADGIR · KARNATAKA · EST. 2006</text>
+</svg>
