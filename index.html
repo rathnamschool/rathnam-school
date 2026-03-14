@@ -1,339 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rathnam English Medium High School | Yadgir | Admissions 2026</title>
-    
-    <meta name="description" content="Rathnam English Medium High School in Yadgir, Karnataka. Quality education, modern labs, and secure transport for Grade 1-10. Admissions open 2026-27.">
-    <meta name="keywords" content="Rathnam School Yadgir, Best school in Yadgir, English Medium School Karnataka, Admissions 2026">
-    <meta name="author" content="Rathnam High School">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rathnam English Medium High School | Yadgir</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a1628;--blue:#1a3a6b;--gold:#c9993a;--gold-light:#e8c46a;
+  --white:#fff;--off:#f8f9fc;--text:#2d3748;--muted:#718096;
+  --radius:14px;--shadow:0 20px 60px rgba(0,0,0,.12);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);overflow-x:hidden}
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #003366; 
-            --accent: #D4AF37;  
-            --text: #333;
-            --light: #f4f7f6;
-            --whatsapp: #25D366;
-            --footer: #001a33;
-        }
+/* ── NAV ── */
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 5%;transition:.4s;background:transparent}
+nav.scrolled{background:rgba(10,22,40,.96);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.3)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-badge{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:10px;display:grid;place-items:center;font-size:1.4rem;font-weight:900;color:var(--navy)}
+.logo-text{color:#fff;font-family:'Playfair Display',serif;font-size:.95rem;line-height:1.2;font-weight:700}
+.logo-text span{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:400;opacity:.7;letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.5px;transition:.2s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy)!important;padding:10px 24px;border-radius:50px;font-weight:700!important;font-size:.78rem!important}
 
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
+/* ── HERO ── */
+.hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=80') center/cover;transform:scale(1.1);transition:transform 8s ease-out}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,22,40,.85) 0%,rgba(26,58,107,.75) 50%,rgba(10,22,40,.9) 100%)}
+.hero-content{position:relative;z-index:2;max-width:900px;padding:0 20px;animation:fadeUp .9s ease forwards}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,153,58,.2);border:1px solid rgba(201,153,58,.4);color:var(--gold-light);padding:6px 18px;border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);color:#fff;line-height:1.1;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero p{color:rgba(255,255,255,.75);font-size:1.05rem;max-width:600px;margin:0 auto 40px;line-height:1.8}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:14px 36px;border-radius:50px;font-weight:700;text-decoration:none;font-size:.88rem;transition:.3s;box-shadow:0 8px 30px rgba(201,153,58,.4)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(201,153,58,.5)}
+.btn-ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;padding:14px 36px;border-radius:50px;font-weight:500;text-decoration:none;font-size:.88rem;transition:.3s;backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:2px}
+.scroll-dot{width:1px;height:50px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:scrollAnim 2s ease-in-out infinite}
 
-        /* --- Navigation --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5%;
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+/* ── STATS STRIP ── */
+.stats-strip{background:linear-gradient(135deg,var(--navy),var(--blue));padding:48px 5%}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;text-align:center}
+.stat-item{color:#fff}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--gold-light);font-weight:700;display:block}
+.stat-label{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;opacity:.7;margin-top:4px}
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 12px;
-        }
+/* ── SECTION BASE ── */
+section{padding:90px 5%}
+.section-head{text-align:center;max-width:600px;margin:0 auto 60px}
+.eyebrow{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--navy);line-height:1.2;margin-bottom:16px}
+.section-sub{color:var(--muted);line-height:1.8;font-size:.95rem}
 
-        .school-logo-img {
-            height: 50px;
-            width: auto;
-            border-radius: 4px;
-        }
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1100px;margin:0 auto}
+.about-img-wrap{position:relative}
+.about-img{width:100%;height:480px;object-fit:cover;border-radius:24px;display:block}
+.about-img-card{position:absolute;bottom:-28px;right:-28px;background:#fff;border-radius:16px;padding:22px 28px;box-shadow:var(--shadow);border-left:4px solid var(--gold)}
+.about-img-card strong{display:block;font-size:1.8rem;font-family:'Playfair Display',serif;color:var(--navy)}
+.about-img-card span{font-size:.78rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.about-content .eyebrow{text-align:left}
+.about-content h2{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--navy);margin-bottom:20px;line-height:1.2}
+.about-content p{color:var(--muted);line-height:1.9;margin-bottom:18px;font-size:.95rem}
+.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.pillar{display:flex;align-items:center;gap:12px;padding:16px;background:var(--off);border-radius:12px}
+.pillar-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:10px;display:grid;place-items:center;font-size:1.1rem;flex-shrink:0}
+.pillar p{font-size:.82rem;font-weight:600;color:var(--navy);margin:0}
 
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: var(--primary);
-            font-weight: bold;
-            text-transform: uppercase;
-            line-height: 1.2;
-        }
+/* ── GALLERY ── */
+.gallery-section{background:var(--off)}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px;max-width:1100px;margin:0 auto;border-radius:var(--radius);overflow:hidden}
+.gal-item{background-size:cover;background-position:center;cursor:pointer;position:relative;overflow:hidden;border-radius:10px}
+.gal-item:first-child{grid-row:span 2}
+.gal-item::after{content:attr(data-label);position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;padding:30px 16px 14px;font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;opacity:0;transition:.3s}
+.gal-item:hover::after{opacity:1}
+.gal-item:hover{transform:scale(1.02)}
 
-        /* --- Hero Section --- */
-        .hero {
-            height: 65vh;
-            background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)), 
-                        url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 10%;
-        }
+/* ── FACILITIES ── */
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto}
+.fac-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:.3s;cursor:pointer;border:2px solid transparent}
+.fac-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.15);border-color:var(--gold)}
+.fac-img{height:160px;width:100%;object-fit:cover;display:block}
+.fac-body{padding:20px}
+.fac-body h3{font-size:1rem;color:var(--navy);margin-bottom:6px;font-weight:700}
+.fac-body p{font-size:.78rem;color:var(--muted)}
+.fac-arrow{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:.75rem;font-weight:600;margin-top:10px}
 
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; max-width: 800px; }
+/* ── WHY US ── */
+.why-section{background:linear-gradient(135deg,var(--navy) 0%,#1a3a6b 100%);color:#fff}
+.why-section .section-title{color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1100px;margin:0 auto}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:36px 28px;transition:.3s;backdrop-filter:blur(10px)}
+.why-card:hover{background:rgba(255,255,255,.1);transform:translateY(-6px)}
+.why-icon{font-size:2.4rem;margin-bottom:18px}
+.why-card h3{font-size:1.05rem;color:var(--gold-light);margin-bottom:12px;font-weight:700}
+.why-card p{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.8}
 
-        /* --- Section Styling --- */
-        section { padding: 80px 10%; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); text-align: center; margin-bottom: 15px; }
-        .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; }
+/* ── TESTIMONIALS ── */
+.testi-section{background:var(--off)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
+.testi-card{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.06);position:relative}
+.testi-card::before{content:'"';font-family:'Playfair Display',serif;font-size:5rem;color:var(--gold);opacity:.2;position:absolute;top:10px;left:24px;line-height:1}
+.stars{color:var(--gold);font-size:.9rem;margin-bottom:14px}
+.testi-card p{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:24px;position:relative;z-index:1}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:grid;place-items:center;font-weight:700;color:var(--navy);font-size:1rem;flex-shrink:0}
+.testi-name{font-weight:700;font-size:.88rem;color:var(--navy)}
+.testi-role{font-size:.75rem;color:var(--muted)}
 
-        /* --- Gallery Section --- */
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .gallery-item {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .gallery-item:hover { transform: scale(1.03); filter: brightness(1.1); }
+/* ── ADMISSIONS ── */
+.admissions-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;max-width:1100px;margin:0 auto;align-items:start}
+.adm-info h2{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--navy);margin-bottom:20px;line-height:1.2}
+.adm-info p{color:var(--muted);line-height:1.9;margin-bottom:28px}
+.steps{display:flex;flex-direction:column;gap:18px}
+.step{display:flex;align-items:flex-start;gap:16px}
+.step-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:grid;place-items:center;font-weight:800;font-size:.85rem;color:var(--navy);flex-shrink:0}
+.step-text strong{display:block;font-size:.9rem;color:var(--navy);margin-bottom:4px}
+.step-text span{font-size:.82rem;color:var(--muted)}
+.adm-form{background:#fff;border-radius:24px;padding:44px;box-shadow:var(--shadow)}
+.adm-form h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:8px}
+.adm-form p{font-size:.82rem;color:var(--muted);margin-bottom:28px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:6px;letter-spacing:.5px;text-transform:uppercase}
+.form-group input,.form-group select{width:100%;padding:13px 16px;border:2px solid #e2e8f0;border-radius:10px;font-family:'Inter',sans-serif;font-size:.9rem;color:var(--text);transition:.2s;background:#fff}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold)}
+.submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border:none;border-radius:12px;font-family:'Inter',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:.3s;margin-top:8px}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(10,22,40,.3)}
+.submit-btn:disabled{opacity:.6;transform:none}
+.form-note{text-align:center;font-size:.72rem;color:var(--muted);margin-top:12px}
 
-        /* --- Facilities --- */
-        .facilities { background: var(--light); }
-        .facility-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .facility-card { padding: 20px; background: white; border-radius: 12px; transition: 0.3s; cursor: pointer; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .facility-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .facility-img { height: 150px; width: 100%; border-radius: 8px; margin-bottom: 15px; object-fit: cover; }
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:80px 5% 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:50px;max-width:1100px;margin:0 auto 60px}
+.footer-brand p{color:rgba(255,255,255,.55);font-size:.85rem;line-height:1.9;margin:16px 0 24px}
+.footer-social{display:flex;gap:12px}
+.social-btn{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(255,255,255,.7);text-decoration:none;font-size:.9rem;transition:.2s}
+.social-btn:hover{background:var(--gold);color:var(--navy)}
+.footer-col h4{color:#fff;font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.footer-col a,.footer-col p{color:rgba(255,255,255,.5);font-size:.83rem;text-decoration:none;display:block;margin-bottom:10px;transition:.2s;line-height:1.6}
+.footer-col a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{color:rgba(255,255,255,.35);font-size:.78rem}
+.footer-bottom span{color:var(--gold);font-size:.78rem}
 
-        /* --- Admissions --- */
-        .admissions-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: #fff; }
-        .form-side { background: var(--light); padding: 40px; border-radius: 15px; }
-        input, select { width: 100%; padding: 12px; margin: 10px 0 20px 0; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; }
-        .submit-btn { width: 100%; padding: 15px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
-        .submit-btn:hover { background: var(--primary); }
+/* ── FLOATING ── */
+.float-wrap{position:fixed;bottom:24px;right:24px;display:flex;flex-direction:column;gap:12px;z-index:9999}
+.fb{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font-size:1.4rem;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:.3s}
+.fb:hover{transform:scale(1.12)}
+.fb-wa{background:#25D366}
+.fb-call{background:linear-gradient(135deg,var(--gold),var(--gold-light))}
+.fb-top{background:var(--navy);font-size:1rem;display:none}
+.fb-top.show{display:grid}
 
-        /* --- Footer --- */
-        footer { background: var(--footer); color: #ccc; padding: 60px 10% 20px; font-size: 0.9rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-col h4 { color: white; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
-        .footer-col p, .footer-col a { color: #ccc; text-decoration: none; margin-bottom: 10px; display: block; }
-        .map-container { width: 100%; height: 150px; background: #222; border-radius: 8px; overflow: hidden; }
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:5000;place-items:center;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:grid}
+.modal-box{background:#fff;border-radius:24px;padding:48px;max-width:520px;width:90%;position:relative;animation:popIn .3s ease}
+.modal-close{position:absolute;top:16px;right:20px;font-size:1.5rem;cursor:pointer;color:var(--muted);background:none;border:none;line-height:1}
+.modal-icon{font-size:2.8rem;margin-bottom:16px}
+.modal-box h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);margin-bottom:8px}
+.modal-box p{color:var(--muted);font-size:.88rem;line-height:1.8;margin-bottom:20px}
+.modal-box ul{padding-left:0;list-style:none;display:grid;gap:10px}
+.modal-box li{display:flex;align-items:flex-start;gap:12px;font-size:.88rem;color:var(--text);line-height:1.5}
+.modal-box li::before{content:"✓";width:22px;height:22px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:grid;place-items:center;font-size:.65rem;font-weight:800;color:var(--navy);flex-shrink:0;margin-top:1px}
 
-        /* --- Floating Contact --- */
-        .floating-contact { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
-        .float-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; color: white; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; pointer-events: auto; cursor: pointer; }
-        .float-btn.whatsapp { background: var(--whatsapp); }
-        .float-btn.call { background: var(--primary); }
-        .float-btn:hover { transform: scale(1.1); }
+/* ── ANIMS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scrollAnim{0%,100%{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(.6)}}
+@keyframes popIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s ease}
+.reveal.in{opacity:1;transform:none}
 
-        /* --- Modal --- */
-        #facilityModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 3000; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: white; padding: 40px; border-radius: 15px; max-width: 500px; width: 90%; position: relative; }
-        .close-modal { position: absolute; top: 10px; right: 20px; font-size: 30px; cursor: pointer; }
-        #modalBody ul { padding-left: 20px; margin-top: 15px; }
-        #modalBody li { margin-bottom: 8px; }
-
-        @media (max-width: 768px) { 
-            .admissions-container { grid-template-columns: 1fr; } 
-            .hero h1 { font-size: 2.5rem; }
-            .logo-text { font-size: 0.9rem; }
-        }
-    </style>
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .about-grid,.admissions-wrap{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .fac-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid,.testi-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,160px)}
+  .gal-item:first-child{grid-row:span 1}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links .hide-mob{display:none}
+  .about-img-card{right:10px;bottom:-20px}
+}
+@media(max-width:600px){
+  .stats-grid,.fac-grid{grid-template-columns:1fr}
+  .about-pillars{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .gal-item{height:160px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+}
+</style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo-container">
-            <img src="Logo.png" alt="Rathnam School Logo" class="school-logo-img">
-            <span class="logo-text">Rathnam English Medium<br>High School</span>
-        </a>
-        <a href="#apply" style="background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 50px; font-size: 0.8rem; font-weight: 600;">ENROLL NOW</a>
-    </nav>
-
-    <header class="hero">
-        <h1>Building Future Leaders</h1>
-        <p>A premier English Medium institution in Yadgir district committed to academic excellence and character building.</p>
-    </header>
-
-    <section>
-        <h2 class="section-title">Life at Rathnam</h2>
-        <p class="section-subtitle">Glimpses of our vibrant campus and student activities.</p>
-        <div class="gallery-container">
-            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=60');" title="Science Exhibition"></div>
-            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=60');" title="Modern Classroom"></div>
-            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=500&q=60');" title="Sports Day"></div>
-            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&w=500&q=60');" title="Library Session"></div>
-        </div>
-    </section>
-
-    <section class="facilities">
-    <h2 class="section-title">World Class Facilities</h2>
-    <div class="facility-grid">
-        <div class="facility-card" onclick="openModal('labs')">
-            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=500&q=60" class="facility-img" alt="Science Lab">
-            <h3>Smart Labs</h3>
-            <p><small>View Equipment List</small></p>
-        </div>
-
-     <div class="facility-card" onclick="openModal('transport')">
-                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" class="facility-img" alt="Yellow School Bus">
-                <h3>Secure Transport</h3>
-                <p><small>View Route Map</small></p>
-            </div>
-
-        <div class="facility-card" onclick="openModal('library')">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=60" class="facility-img" alt="Library">
-            <h3>E-Library</h3>
-            <p><small>View Collection</small></p>
-        </div>
-
-        <div class="facility-card" onclick="openModal('sports')">
-            <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=600&q=80" class="facility-img" alt="Children playing sports">
-            <h3>Sports Academy</h3>
-            <p><small>View Activities</small></p>
-        </div>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-badge">R</div>
+      <div class="logo-text">Rathnam English Medium<br><span>High School · Yadgir</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#about" class="hide-mob">About</a>
+      <a href="#facilities" class="hide-mob">Facilities</a>
+      <a href="#admissions" class="hide-mob">Admissions</a>
+      <a href="#contact" class="hide-mob">Contact</a>
+      <a href="#admissions" class="nav-cta">Enroll Now →</a>
     </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⭐ Admissions Open 2026–27</div>
+    <h1>Where <em>Futures</em><br>Are Built</h1>
+    <p>A premier English-medium institution in Yadgir, Karnataka — nurturing academic brilliance, character, and lifelong curiosity from Grade 1 to 10.</p>
+    <div class="hero-btns">
+      <a href="#admissions" class="btn-primary">Apply for Admission</a>
+      <a href="#about" class="btn-ghost">Discover Our School</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-dot"></div>
+    <span>SCROLL</span>
+  </div>
 </section>
 
-    <section class="admissions-container" id="apply">
-        <div class="info-side">
-            <h2 class="section-title" style="text-align: left;">Admissions 2026-27</h2>
-            <p>Secure your child's future today. Our admissions process is simple and transparent.</p>
-            <ul style="padding-left: 20px;">
-                <li>State-of-the-art STEM curriculum</li>
-                <li>Focus on communication and soft skills</li>
-                <li>Safe and inclusive environment</li>
-            </ul>
-        </div>
-        <div class="form-side">
-            <form id="inquiryForm">
-                <input type="text" id="parentName" placeholder="Parent Name" required>
-                <input type="tel" id="phoneNumber" placeholder="Phone Number" required pattern="[0-9]{10}">
-                <select id="selectedClass">
-                    <option value="Primary (1-5)">Class 1 - 5 (Primary)</option>
-                    <option value="High School (6-10)">Class 6 - 10 (High School)</option>
-                </select>
-                <button type="submit" class="submit-btn" id="submitBtn">Get School Prospectus</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Visit Us</h4>
-                <p>Rathnam English Medium High School<br>Hosalli Cross, Yadgir, Karnataka - 585202</p>
-                <div class="map-container">
-                   
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.483479108049!2d77.1401331738131!3d16.75260482078415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc853af32de1611%3A0xa851ab08e3b33e76!2sRathnam%20English%20Medium%20School!5e0!3m2!1sen!2sin!4v1773402669414!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-                   				
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Reach Out</h4>
-                <p>📞 +91 9535805209</p>
-                <p>✉️ office@rathnamschool.com</p>
-                <a href="https://www.facebook.com/share/189Atqcnag/?mibextid=wwXIfr" target="_blank">Our Facebook Page</a><br>
-                <a href="#">Instagram Profile</a>
-            </div>
-            <div class="footer-col">
-                <h4>Working Hours</h4>
-                <p>Mon - Sat: 9:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-            </div>
-        </div>
-        <div style="text-align: center; border-top: 1px solid #111; padding-top: 20px; font-size: 0.8rem;">
-            &copy; 2026 Rathnam English Medium High School. Designed for Excellence.
-        </div>
-    </footer>
-
-    <div id="facilityModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle" style="color:var(--primary)"></h2>
-            <div id="modalBody"></div>
-        </div>
+<!-- STATS -->
+<div class="stats-strip reveal">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-num" data-target="500">0</span>
+      <div class="stat-label">Students Enrolled</div>
     </div>
-
-    <div class="floating-contact">
-        <a href="https://wa.me/910000000000" target="_blank" class="float-btn whatsapp">💬</a>
-        <a href="tel:+910000000000" class="float-btn call">📞</a>
+    <div class="stat-item">
+      <span class="stat-num" data-target="30">0</span>
+      <div class="stat-label">Expert Faculty</div>
     </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="10">0</span>
+      <div class="stat-label">Grades Offered</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="95">0</span>
+      <div class="stat-label">% Pass Rate</div>
+    </div>
+  </div>
+</div>
 
-    <script>
-        const data = {
-            labs: { 
-                title: "Smart Science & Tech Labs", 
-                body: "<ul><li>Modern Physics, Chemistry, and Biology kits</li><li>Computer Lab with high-speed internet</li><li>Safety-first design with expert supervisors</li><li>Smart Boards for visual learning</li></ul>" 
-            },
-            transport: { 
-                title: "Safe Transport Services", 
-                body: "<ul><li>CCTV & GPS tracked school bus fleet</li><li>Highly trained drivers and bus attendents</li><li>Covers all major localities in Yadgir</li><li>Emergency alert system for parents</li></ul>" 
-            },
-            library: { 
-                title: "Comprehensive E-Library", 
-                body: "<ul><li>5,000+ books ranging from fiction to reference</li><li>Digital reading tablets for modern research</li><li>Quiet study zones and reading clubs</li><li>Weekly storytelling sessions for primary students</li></ul>" 
-            },
-            sports: { 
-                title: "Sports & Physical Academy", 
-                body: "<ul><li>Professional coaching for Khokho and Football</li><li>Dedicated field for athletics and outdoor sports</li><li>Indoor facility for Chess, Carrom, and Table Tennis</li><li>Annual Inter-school sports meet participation</li></ul>" 
-            }
-        };
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid reveal">
+    <div class="about-img-wrap">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" class="about-img" alt="Rathnam School students">
+      <div class="about-img-card">
+        <strong>10+</strong>
+        <span>Years of Excellence</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="eyebrow">Our Story</div>
+      <h2>Educating Hearts &amp; Minds in Yadgir</h2>
+      <p>Located at Hosalli Cross, Yadgir, Rathnam English Medium High School has been the educational cornerstone of this district — offering a state-board curriculum enriched with modern pedagogy, English-first communication, and holistic student development.</p>
+      <p>We believe every child is uniquely gifted. Our mission is to discover that gift, nurture it with care, and send students out as confident, compassionate, and capable citizens.</p>
+      <div class="about-pillars">
+        <div class="pillar"><div class="pillar-icon">🎯</div><p>Academic Excellence</p></div>
+        <div class="pillar"><div class="pillar-icon">🤝</div><p>Character Building</p></div>
+        <div class="pillar"><div class="pillar-icon">💡</div><p>Creative Thinking</p></div>
+        <div class="pillar"><div class="pillar-icon">🌱</div><p>Holistic Growth</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function openModal(key) {
-            document.getElementById('modalTitle').innerText = data[key].title;
-            document.getElementById('modalBody').innerHTML = data[key].body;
-            document.getElementById('facilityModal').style.display = 'flex';
-        }
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="section-head reveal">
+    <div class="eyebrow">Campus Life</div>
+    <h2 class="section-title">Life at Rathnam</h2>
+    <p class="section-sub">Vibrant classrooms, spirited sports days, and a community that learns and grows together.</p>
+  </div>
+  <div class="gallery-grid reveal" style="max-width:1100px;margin:0 auto">
+    <div class="gal-item" data-label="Science Exhibition" style="background-image:url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=70')"></div>
+    <div class="gal-item" data-label="Modern Classrooms" style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=70')"></div>
+    <div class="gal-item" data-label="Sports Day" style="background-image:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=500&q=70')"></div>
+    <div class="gal-item" data-label="Library" style="background-image:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=70')"></div>
+    <div class="gal-item" data-label="Annual Day" style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=70')"></div>
+  </div>
+</section>
 
-        function closeModal() { document.getElementById('facilityModal').style.display = 'none'; }
+<!-- FACILITIES -->
+<section id="facilities">
+  <div class="section-head reveal">
+    <div class="eyebrow">Infrastructure</div>
+    <h2 class="section-title">World-Class Facilities</h2>
+    <p class="section-sub">Every resource your child needs to explore, discover, and excel — all under one roof.</p>
+  </div>
+  <div class="fac-grid reveal">
+    <div class="fac-card" onclick="openModal('labs')">
+      <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Science Lab">
+      <div class="fac-body">
+        <h3>Science &amp; Tech Labs</h3>
+        <p>Hands-on learning with modern equipment and smart boards</p>
+        <div class="fac-arrow">View Details →</div>
+      </div>
+    </div>
+    <div class="fac-card" onclick="openModal('transport')">
+      <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Transport">
+      <div class="fac-body">
+        <h3>Safe Transport</h3>
+        <p>GPS-tracked buses covering all major areas in Yadgir</p>
+        <div class="fac-arrow">View Details →</div>
+      </div>
+    </div>
+    <div class="fac-card" onclick="openModal('library')">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Library">
+      <div class="fac-body">
+        <h3>E-Library</h3>
+        <p>1,000+ books, digital tablets, and quiet reading zones</p>
+        <div class="fac-arrow">View Details →</div>
+      </div>
+    </div>
+    <div class="fac-card" onclick="openModal('sports')">
+      <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Sports">
+      <div class="fac-body">
+        <h3>Sports Academy</h3>
+        <p>Professional coaching for KhoKho, Football, Chess and more</p>
+        <div class="fac-arrow">View Details →</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // --- GOOGLE SHEETS INTEGRATION & REDIRECT ---
-        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const btn = document.getElementById('submitBtn');
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbx--_7sOLPYEd_2UF6TG72R-Pge8GcruF7qZ1gAzuH5Gjsf4oW4JrGxzRrblUXyY9u-vA/exec';
+<!-- WHY US -->
+<section class="why-section reveal">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--gold-light)">Why Choose Us</div>
+    <h2 class="section-title">The Rathnam Difference</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.6)">Six reasons thousands of Yadgir families trust us with their most precious investment.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon">📚</div><h3>State Board + Life Skills</h3><p>Rigorous Karnataka state-board curriculum enriched with communication, critical thinking, and soft-skills training that sets our students apart.</p></div>
+    <div class="why-card"><div class="why-icon">🏆</div><h3>Proven Results</h3><p>Consistently high board exam results and district-level recognition. Our students regularly win in academics, sports, and cultural competitions.</p></div>
+    <div class="why-card"><div class="why-icon">🛡️</div><h3>Safe &amp; Secure Campus</h3><p>CCTV-monitored premises, trained staff, and a strict no-stranger policy so parents can have complete peace of mind every day.</p></div>
+    <div class="why-card"><div class="why-icon">👩‍🏫</div><h3>Experienced Teachers</h3><p>Qualified, passionate educators who know every child by name. Low student-teacher ratios ensure personalized attention and care.</p></div>
+    <div class="why-card"><div class="why-icon">🌐</div><h3>English-First Approach</h3><p>Daily English communication practice, spoken-English sessions, and a language-rich environment builds confidence from an early age.</p></div>
+    <div class="why-card"><div class="why-icon">❤️</div><h3>Inclusive Community</h3><p>A warm, inclusive environment where every child—regardless of background—feels seen, valued, and motivated to grow.</p></div>
+  </div>
+</section>
 
-            const formData = {
-                name: document.getElementById('parentName').value,
-                phone: document.getElementById('phoneNumber').value,
-                className: document.getElementById('selectedClass').value
-            };
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="testimonials">
+  <div class="section-head reveal">
+    <div class="eyebrow">Parent Stories</div>
+    <h2 class="section-title">What Families Say</h2>
+  </div>
+  <div class="testi-grid reveal">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>My daughter joined in Grade 1 and the transformation is remarkable. She speaks English so confidently now! The teachers are caring and the school feels like a second home.</p>
+      <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sunitha Patil</div><div class="testi-role">Parent · Grade 4</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>The bus service is very safe and punctual. The GPS tracking gives us real peace of mind. The school's academic standard is excellent — my son scored 98% in the board exams.</p>
+      <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Raju Malagi</div><div class="testi-role">Parent · Grade 10</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>The science lab and computer facilities are better than schools I've seen in bigger cities. Most importantly, the school's values and discipline have shaped my children beautifully.</p>
+      <div class="testi-author"><div class="testi-avatar">P</div><div><div class="testi-name">Prakash Reddy</div><div class="testi-role">Parent · Grade 7 &amp; 9</div></div></div>
+    </div>
+  </div>
+</section>
 
-            btn.innerText = "Capturing Details...";
-            btn.disabled = true;
+<!-- ADMISSIONS -->
+<section id="admissions">
+  <div class="admissions-wrap reveal">
+    <div class="adm-info">
+      <div class="eyebrow">Admissions 2026–27</div>
+      <h2>Secure Your Child's Seat Today</h2>
+      <p>Our admissions process is simple, transparent, and parent-friendly. Limited seats available for 2026–27. Apply now to avoid disappointment.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Submit Inquiry</strong><span>Fill the form — takes under 60 seconds</span></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text"><strong>School Calls You</strong><span>Our team reaches out within 24 hours</span></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Campus Visit</strong><span>Tour the school with your child</span></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Confirm Admission</strong><span>Complete formalities and secure the seat</span></div></div>
+      </div>
+    </div>
+    <div class="adm-form">
+      <h3>Request a Prospectus</h3>
+      <p>Fill in your details and we'll get in touch shortly.</p>
+      <form id="inquiryForm">
+        <div class="form-group">
+          <label>Parent / Guardian Name</label>
+          <input type="text" id="parentName" placeholder="e.g. Suresh Kumar" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="phoneNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label>Admission For</label>
+          <select id="selectedClass">
+            <option value="">Select Grade</option>
+            <option value="Preschool">Preschool (Nursery / LKG / UKG)</option>
+            <option value="Primary (1-5)">Class 1 – 5 (Primary)</option>
+            <option value="High School (6-10)">Class 6 – 10 (High School)</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Get Free Prospectus →</button>
+        <p class="form-note">🔒 Your information is safe and will never be shared.</p>
+      </form>
+    </div>
+  </div>
+</section>
 
-            fetch(scriptURL, {
-                method: 'POST',
-                mode: 'no-cors', 
-                cache: 'no-cache',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            .then(() => {
-                btn.innerText = "Success! Redirecting...";
-                btn.style.background = "#28a745";
-                setTimeout(() => { 
-                    window.location.href = "thank-you.html"; 
-                }, 1000);
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert("Submission failed. Please check your connection.");
-                btn.disabled = false;
-                btn.innerText = "Get School Prospectus";
-            });
-        });
-    </script>
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-badge">R</div><div class="logo-text" style="color:#fff">Rathnam English Medium<br><span>High School · Yadgir</span></div></div>
+      <p>Building tomorrow's leaders at Hosalli Cross, Yadgir — one student at a time since our founding.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/189Atqcnag/?mibextid=wwXIfr" target="_blank" class="social-btn" title="Facebook">f</a>
+        <a href="#" class="social-btn" title="Instagram">📷</a>
+        <a href="https://wa.me/910000000000" class="social-btn" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#testimonials">Parent Reviews</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📞 +91 00000 00000</p>
+      <p>✉️ office@rathnamschool.com</p>
+      <p>📍 Hosalli Cross, Yadgir<br>Karnataka – 585202</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon – Sat<br>8:30 AM – 3:30 PM</p>
+      <p>Office open:<br>8:00 AM – 4:30 PM</p>
+      <p style="color:rgba(255,255,255,.3)">Sunday: Closed</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Rathnam English Medium High School. All rights reserved.</p>
+    <span>Designed for Excellence ✦</span>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-wrap">
+  <a href="#top" class="fb fb-top" id="backToTop" title="Back to top">↑</a>
+  <a href="https://wa.me/910000000000" target="_blank" class="fb fb-wa" title="WhatsApp">💬</a>
+  <a href="tel:+910000000000" class="fb fb-call" title="Call Us">📞</a>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-icon" id="mIcon"></div>
+    <h3 id="mTitle"></h3>
+    <p id="mDesc"></p>
+    <ul id="mList"></ul>
+  </div>
+</div>
+
+<script>
+// ── NAV SCROLL ──
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+  document.getElementById('backToTop').classList.toggle('show',window.scrollY>400);
+});
+
+// ── PARALLAX HERO ──
+window.addEventListener('scroll',()=>{
+  const s=window.scrollY;
+  document.getElementById('heroBg').style.transform=`scale(1.1) translateY(${s*0.25}px)`;
+});
+
+// ── REVEAL ON SCROLL ──
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.querySelector('[data-target]'))startCounters(e.target)}});
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── COUNTER ANIMATION ──
+function startCounters(wrap){
+  wrap.querySelectorAll('[data-target]').forEach(el=>{
+    const target=+el.dataset.target,dur=1800,start=performance.now();
+    const tick=now=>{
+      const p=Math.min((now-start)/dur,1),val=Math.floor(p*target);
+      el.textContent=(p<1?val:target)+(el.dataset.suffix||'+');
+      if(p<1)requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}
+// Add suffix to all stat-nums
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
+  const t=+el.dataset.target;
+  el.dataset.suffix = t===95 ? '%' : '+';
+});
+
+// ── MODAL DATA ──
+const modals={
+  labs:{icon:'🔬',title:'Science & Technology Labs',desc:'Fully equipped for hands-on discovery and curiosity-driven learning.',list:['Modern Physics, Chemistry & Biology kits','Computer Lab with high-speed fiber internet','Smart boards for interactive visual lessons','Safety-first design with trained lab supervisors']},
+  transport:{icon:'🚌',title:'Safe Transport Services',desc:'Peace of mind for parents — every single school day.',list:['CCTV & GPS-tracked school bus fleet','Trained drivers and dedicated bus attendants','Covers all major localities across Yadgir','Emergency SOS alert system for parents']},
+  library:{icon:'📚',title:'Comprehensive E-Library',desc:'A love for reading that lasts a lifetime.',list:['1,000+ books from fiction to reference titles','Digital reading tablets for modern research','Quiet study zones and active reading clubs','Weekly storytelling sessions for primary students']},
+  sports:{icon:'⚽',title:'Sports & Physical Academy',desc:'Teamwork, discipline and joy — on and off the field.',list:['Professional coaching for KhoKho & Football','Dedicated ground for athletics & outdoor sports','Indoor facility for Chess, Carrom & Table Tennis','Annual inter-school sports meet participation']}
+};
+function openModal(k){
+  const d=modals[k];
+  document.getElementById('mIcon').textContent=d.icon;
+  document.getElementById('mTitle').textContent=d.title;
+  document.getElementById('mDesc').textContent=d.desc;
+  document.getElementById('mList').innerHTML=d.list.map(i=>`<li>${i}</li>`).join('');
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal()});
+
+// ── FORM SUBMIT ──
+document.getElementById('inquiryForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  const url='https://script.google.com/macros/s/AKfycbx--_7sOLPYEd_2UF6TG72R-Pge8GcruF7qZ1gAzuH5Gjsf4oW4JrGxzRrblUXyY9u-vA/exec';
+  const payload={
+    name:document.getElementById('parentName').value,
+    phone:document.getElementById('phoneNumber').value,
+    className:document.getElementById('selectedClass').value
+  };
+  btn.textContent='Sending…';btn.disabled=true;
+  fetch(url,{method:'POST',mode:'no-cors',cache:'no-cache',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+  .then(()=>{btn.textContent='✓ Sent! Redirecting…';btn.style.background='#22c55e';setTimeout(()=>window.location.href='thank-you.html',1200)})
+  .catch(()=>{alert('Submission failed. Please try again or call us directly.');btn.disabled=false;btn.textContent='Get Free Prospectus →'});
+});
+</script>
 </body>
 </html>
-
-
