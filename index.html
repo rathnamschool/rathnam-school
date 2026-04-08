@@ -20,7 +20,6 @@ nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 5%;transition:.4s;bac
 nav.scrolled{background:rgba(10,22,40,.96);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.3)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-badge{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:10px;display:grid;place-items:center;font-size:1.4rem;font-weight:900;color:var(--navy)}
 .logo-text{color:#fff;font-family:'Playfair Display',serif;font-size:.95rem;line-height:1.2;font-weight:700}
 .logo-text span{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:400;opacity:.7;letter-spacing:2px;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:32px}
@@ -30,7 +29,7 @@ nav.scrolled{background:rgba(10,22,40,.96);backdrop-filter:blur(12px);box-shadow
 
 /* ── HERO ── */
 .hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=80') center/cover;transform:scale(1.1);transition:transform 8s ease-out}
+.hero-bg{position:absolute;inset:0;background:url('school-building.jpg') center/cover;transform:scale(1.1);transition:transform 8s ease-out}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,22,40,.85) 0%,rgba(26,58,107,.75) 50%,rgba(10,22,40,.9) 100%)}
 .hero-content{position:relative;z-index:2;max-width:900px;padding:0 20px;animation:fadeUp .9s ease forwards}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,153,58,.2);border:1px solid rgba(201,153,58,.4);color:var(--gold-light);padding:6px 18px;border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
@@ -102,6 +101,68 @@ section{padding:90px 5%}
 .why-icon{font-size:2.4rem;margin-bottom:18px}
 .why-card h3{font-size:1.05rem;color:var(--gold-light);margin-bottom:12px;font-weight:700}
 .why-card p{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.8}
+
+/* ── FOUNDER ── */
+.founder-section{
+  background:linear-gradient(160deg,#060e1e 0%,#0a1628 50%,#0d1f3c 100%);
+  padding:100px 5%;position:relative;overflow:hidden;
+}
+.founder-section::before{
+  content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;
+  border-radius:50%;background:rgba(201,153,58,.04);pointer-events:none;
+}
+.founder-section::after{
+  content:'';position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;
+  border-radius:50%;background:rgba(201,153,58,.03);pointer-events:none;
+}
+.founder-inner{display:grid;grid-template-columns:340px 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.founder-photo-wrap{text-align:center;position:relative}
+.founder-quote-bg{
+  position:absolute;top:-20px;left:50%;transform:translateX(-50%);
+  font-family:'Playfair Display',serif;font-size:14rem;color:var(--gold);
+  opacity:.04;line-height:1;pointer-events:none;z-index:0;
+}
+.founder-photo-frame{
+  width:260px;height:260px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  padding:5px;margin:0 auto 20px;position:relative;z-index:1;
+  box-shadow:0 0 0 12px rgba(201,153,58,.1),0 0 0 24px rgba(201,153,58,.05);
+}
+.founder-photo-inner{
+  width:100%;height:100%;border-radius:50%;overflow:hidden;
+  background:linear-gradient(135deg,#1a3a6b,#0a1628);
+  display:flex;align-items:center;justify-content:center;
+}
+.founder-photo-inner img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.founder-initials{
+  font-family:'Playfair Display',serif;font-size:4rem;font-weight:700;
+  color:var(--gold-light);opacity:.8;line-height:1;
+}
+.founder-name-plate{
+  background:rgba(201,153,58,.12);border:1px solid rgba(201,153,58,.25);
+  border-radius:50px;padding:8px 24px;display:inline-block;margin-bottom:8px;
+}
+.founder-name-plate span{color:var(--gold-light);font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.founder-years{color:rgba(255,255,255,.4);font-size:.75rem;letter-spacing:1px}
+.founder-content .eyebrow{color:var(--gold);text-align:left;margin-bottom:10px}
+.founder-content h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;margin-bottom:6px;line-height:1.2}
+.founder-subtitle{color:var(--gold-light);font-size:.88rem;font-style:italic;margin-bottom:28px}
+.founder-story p{color:rgba(255,255,255,.65);line-height:1.95;font-size:.92rem;margin-bottom:14px}
+.founder-story p:last-child{margin-bottom:0}
+.founder-quote{
+  border-left:3px solid var(--gold);padding:14px 22px;margin:22px 0;
+  background:rgba(201,153,58,.06);border-radius:0 12px 12px 0;
+}
+.founder-quote p{
+  font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;
+  color:rgba(255,255,255,.85)!important;margin:0!important;line-height:1.7;
+}
+.founder-journey{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.journey-pill{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:50px;padding:7px 14px;font-size:.75rem;color:rgba(255,255,255,.65);
+}
 
 /* ── TESTIMONIALS ── */
 .testi-section{background:var(--off)}
@@ -180,7 +241,7 @@ footer{background:var(--navy);padding:80px 5% 30px}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .about-grid,.admissions-wrap{grid-template-columns:1fr}
+  .about-grid,.admissions-wrap,.founder-inner{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .fac-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid,.testi-grid{grid-template-columns:1fr}
@@ -189,6 +250,8 @@ footer{background:var(--navy);padding:80px 5% 30px}
   .footer-grid{grid-template-columns:1fr 1fr}
   .nav-links .hide-mob{display:none}
   .about-img-card{right:10px;bottom:-20px}
+  .founder-inner{gap:40px}
+  .founder-photo-frame{width:200px;height:200px}
 }
 @media(max-width:600px){
   .stats-grid,.fac-grid{grid-template-columns:1fr}
@@ -197,6 +260,7 @@ footer{background:var(--navy);padding:80px 5% 30px}
   .gal-item{height:160px}
   .footer-grid{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+  .founder-journey{flex-direction:column}
 }
 </style>
 </head>
@@ -206,30 +270,12 @@ footer{background:var(--navy);padding:80px 5% 30px}
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="logo">
-      <svg width="44" height="50" viewBox="0 0 88 100" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="lgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c46a"/><stop offset="100%" stop-color="#c9993a"/></linearGradient>
-          <linearGradient id="lgN" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3a6b"/><stop offset="100%" stop-color="#0a1628"/></linearGradient>
-        </defs>
-        <path d="M44,4 L82,18 L82,60 Q82,84 44,96 Q6,84 6,60 L6,18 Z" fill="url(#lgG)"/>
-        <path d="M44,12 L74,24 L74,60 Q74,80 44,90 Q14,80 14,60 L14,24 Z" fill="url(#lgN)"/>
-        <rect x="40" y="8" width="8" height="14" rx="2" fill="#c9993a"/>
-        <path d="M44,8 Q39,1 41,0 Q44,0 44,0 Q44,0 47,0 Q49,1 44,8Z" fill="url(#lgG)"/>
-        <path d="M26,44 Q32,41 38,42 L38,68 Q32,67 26,70Z" fill="none" stroke="#e8c46a" stroke-width="1.8"/>
-        <path d="M38,42 Q44,41 50,44 L50,70 Q44,67 38,68Z" fill="none" stroke="#e8c46a" stroke-width="1.8"/>
-        <line x1="38" y1="42" x2="38" y2="68" stroke="#e8c46a" stroke-width="1.8"/>
-        <path d="M23,68 Q38,73 53,68" fill="none" stroke="#e8c46a" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="28" y1="51" x2="36" y2="51" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
-        <line x1="28" y1="56" x2="36" y2="56" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
-        <line x1="28" y1="61" x2="36" y2="61" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
-        <line x1="40" y1="51" x2="48" y2="51" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
-        <line x1="40" y1="56" x2="48" y2="56" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
-        <line x1="40" y1="61" x2="48" y2="61" stroke="#e8c46a" stroke-width="1" opacity="0.7"/>
-      </svg>
+      <img src="logo.png" alt="Rathnam School Logo" style="height:56px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))">
       <div class="logo-text">Rathnam English Medium<br><span>High School · Yadgir</span></div>
     </a>
     <div class="nav-links">
       <a href="#about" class="hide-mob">About</a>
+      <a href="#founder" class="hide-mob">Founder</a>
       <a href="#facilities" class="hide-mob">Facilities</a>
       <a href="#admissions" class="hide-mob">Admissions</a>
       <a href="#contact" class="hide-mob">Contact</a>
@@ -245,37 +291,22 @@ footer{background:var(--navy);padding:80px 5% 30px}
   <div class="hero-content">
     <div class="hero-badge">⭐ Admissions Open 2026–27</div>
     <h1>Where <em>Futures</em><br>Are Built</h1>
-    <p>A premier English-medium institution in Yadgir, Karnataka — nurturing academic brilliance, character, and lifelong curiosity from Grade 1 to 10.</p>
+    <p>A premier English-medium institution in Yadgir, Karnataka — nurturing academic brilliance, character, and lifelong curiosity from Nursery to Grade 10.</p>
     <div class="hero-btns">
       <a href="#admissions" class="btn-primary">Apply for Admission</a>
       <a href="#about" class="btn-ghost">Discover Our School</a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-dot"></div>
-    <span>SCROLL</span>
-  </div>
+  <div class="hero-scroll"><div class="scroll-dot"></div><span>SCROLL</span></div>
 </section>
 
 <!-- STATS -->
 <div class="stats-strip reveal">
   <div class="stats-grid">
-    <div class="stat-item">
-      <span class="stat-num" data-target="500">0</span>
-      <div class="stat-label">Students Enrolled</div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num" data-target="30">0</span>
-      <div class="stat-label">Expert Faculty</div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num" data-target="10">0</span>
-      <div class="stat-label">Grades Offered</div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num" data-target="95">0</span>
-      <div class="stat-label">% Pass Rate</div>
-    </div>
+    <div class="stat-item"><span class="stat-num" data-target="500">0</span><div class="stat-label">Students Enrolled</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="30">0</span><div class="stat-label">Expert Faculty</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="10">0</span><div class="stat-label">Grades Offered</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="95">0</span><div class="stat-label">% Pass Rate</div></div>
   </div>
 </div>
 
@@ -283,11 +314,8 @@ footer{background:var(--navy);padding:80px 5% 30px}
 <section id="about">
   <div class="about-grid reveal">
     <div class="about-img-wrap">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" class="about-img" alt="Rathnam School students">
-      <div class="about-img-card">
-        <strong>19+</strong>
-        <span>Years of Excellence</span>
-      </div>
+      <img src="school-building.jpg" class="about-img" alt="Rathnam School Building">
+      <div class="about-img-card"><strong>19+</strong><span>Years of Excellence</span></div>
     </div>
     <div class="about-content">
       <div class="eyebrow">Our Story</div>
@@ -312,11 +340,14 @@ footer{background:var(--navy);padding:80px 5% 30px}
     <p class="section-sub">Vibrant classrooms, spirited sports days, and a community that learns and grows together.</p>
   </div>
   <div class="gallery-grid reveal" style="max-width:1100px;margin:0 auto">
-    <div class="gal-item" data-label="Science Exhibition" style="background-image:url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=70')"></div>
-    <div class="gal-item" data-label="Modern Classrooms" style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=70')"></div>
-    <div class="gal-item" data-label="Sports Day" style="background-image:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=500&q=70')"></div>
-    <div class="gal-item" data-label="Library" style="background-image:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=70')"></div>
-    <div class="gal-item" data-label="Annual Day" style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=70')"></div>
+    <!-- Slot 1: School building (real photo - spans 2 rows) -->
+    <div class="gal-item" data-label="Our School Campus" style="background-image:url('school-building.jpg')"></div>
+    <!-- Slots 2-5: Replace with your own activity photos -->
+    <!-- Rename your photos: activity1.jpg, activity2.jpg, activity3.jpg, activity4.jpg -->
+    <div class="gal-item" data-label="Science Exhibition" style="background-image:url('activity1.jpg'),url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=70')"></div>
+    <div class="gal-item" data-label="Sports Day" style="background-image:url('activity2.jpg'),url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=500&q=70')"></div>
+    <div class="gal-item" data-label="Annual Day" style="background-image:url('activity3.jpg'),url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=70')"></div>
+    <div class="gal-item" data-label="Classroom" style="background-image:url('activity4.jpg'),url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=70')"></div>
   </div>
 </section>
 
@@ -330,35 +361,19 @@ footer{background:var(--navy);padding:80px 5% 30px}
   <div class="fac-grid reveal">
     <div class="fac-card" onclick="openModal('labs')">
       <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Science Lab">
-      <div class="fac-body">
-        <h3>Science &amp; Tech Labs</h3>
-        <p>Hands-on learning with modern equipment and smart boards</p>
-        <div class="fac-arrow">View Details →</div>
-      </div>
+      <div class="fac-body"><h3>Science &amp; Tech Labs</h3><p>Hands-on learning with modern equipment and smart boards</p><div class="fac-arrow">View Details →</div></div>
     </div>
     <div class="fac-card" onclick="openModal('transport')">
       <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Transport">
-      <div class="fac-body">
-        <h3>Safe Transport</h3>
-        <p>GPS-tracked buses covering all major areas in Yadgir</p>
-        <div class="fac-arrow">View Details →</div>
-      </div>
+      <div class="fac-body"><h3>Safe Transport</h3><p>GPS-tracked buses covering all major areas in Yadgir</p><div class="fac-arrow">View Details →</div></div>
     </div>
     <div class="fac-card" onclick="openModal('library')">
       <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Library">
-      <div class="fac-body">
-        <h3>E-Library</h3>
-        <p>1,000+ books, digital tablets, and quiet reading zones</p>
-        <div class="fac-arrow">View Details →</div>
-      </div>
+      <div class="fac-body"><h3>E-Library</h3><p>1,000+ books, digital tablets, and quiet reading zones</p><div class="fac-arrow">View Details →</div></div>
     </div>
     <div class="fac-card" onclick="openModal('sports')">
       <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=500&q=70" class="fac-img" alt="Sports">
-      <div class="fac-body">
-        <h3>Sports Academy</h3>
-        <p>Professional coaching for KhoKho, Football, Chess and more</p>
-        <div class="fac-arrow">View Details →</div>
-      </div>
+      <div class="fac-body"><h3>Sports Academy</h3><p>Professional coaching for KhoKho, Football, Chess and more</p><div class="fac-arrow">View Details →</div></div>
     </div>
   </div>
 </section>
@@ -377,6 +392,44 @@ footer{background:var(--navy);padding:80px 5% 30px}
     <div class="why-card"><div class="why-icon">👩‍🏫</div><h3>Experienced Teachers</h3><p>Qualified, passionate educators who know every child by name. Low student-teacher ratios ensure personalized attention and care.</p></div>
     <div class="why-card"><div class="why-icon">🌐</div><h3>English-First Approach</h3><p>Daily English communication practice, spoken-English sessions, and a language-rich environment builds confidence from an early age.</p></div>
     <div class="why-card"><div class="why-icon">❤️</div><h3>Inclusive Community</h3><p>A warm, inclusive environment where every child—regardless of background—feels seen, valued, and motivated to grow.</p></div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder-section reveal" id="founder">
+  <div class="founder-inner">
+    <div class="founder-photo-wrap">
+      <div class="founder-quote-bg">"</div>
+      <div class="founder-photo-frame">
+        <div class="founder-photo-inner">
+          <!--
+            Replace with real photo:
+            <img src="founder.jpg" alt="Late Dr. M. Rathnam">
+          -->
+          <div class="founder-initials">MR</div>
+        </div>
+      </div>
+      <div class="founder-name-plate"><span>Late Dr. M. Rathnam</span></div>
+      <div class="founder-years">Ph.D. in Education · Washington University, USA</div>
+    </div>
+    <div class="founder-content">
+      <div class="eyebrow">Our Founder</div>
+      <h2>Late Dr. M. Rathnam</h2>
+      <div class="founder-subtitle">Educationalist · Visionary · Inspiration</div>
+      <div class="founder-story">
+        <p>Born in the humble village of <strong style="color:var(--gold-light)">Naikal, Yadgir District</strong>, Dr. M. Rathnam's life is the ultimate testament to the transformative power of education. Rising from modest beginnings, he faced every obstacle with determination — studied hard, earned a <strong style="color:var(--gold-light)">Ph.D. in Education from the USA</strong>, and went on to become a Professor at Washington University.</p>
+        <div class="founder-quote">
+          <p>"Quality education is not a privilege of the few — it is the birthright of every child, no matter where they come from."</p>
+        </div>
+        <p>He carried one great vision: to bring the quality of education he experienced at the world's finest institutions back to the children of Yadgir. In 2006, that vision became Rathnam School. He may no longer be with us, but <strong style="color:rgba(255,255,255,.85)">his work remains forever.</strong></p>
+      </div>
+      <div class="founder-journey">
+        <div class="journey-pill">📍 <span>Naikal Village, Yadgir</span></div>
+        <div class="journey-pill">🎓 <span>Ph.D. in Education, USA</span></div>
+        <div class="journey-pill">🏛️ <span>Professor, Washington University</span></div>
+        <div class="journey-pill">🏫 <span>Founded Rathnam School, 2006</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -454,44 +507,27 @@ footer{background:var(--navy);padding:80px 5% 30px}
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">
-        <!-- Footer logo -->
-        <svg width="36" height="50" viewBox="280 14 120 206" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="fgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c46a"/><stop offset="100%" stop-color="#c9993a"/></linearGradient><linearGradient id="fgN" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3a6b"/><stop offset="100%" stop-color="#0a1628"/></linearGradient></defs>
-          <path d="M340,48 L394,68 L394,148 Q394,190 340,214 Q286,190 286,148 L286,68 Z" fill="url(#fgG)"/>
-          <path d="M340,58 L386,76 L386,148 Q386,185 340,207 Q294,185 294,148 L294,76 Z" fill="url(#fgN)"/>
-          <path d="M316,118 Q322,115 330,116 L330,158 Q322,157 316,160 Z" fill="none" stroke="#e8c46a" stroke-width="1.5"/>
-          <path d="M330,116 Q338,115 344,118 L344,160 Q338,157 330,158 Z" fill="none" stroke="#e8c46a" stroke-width="1.5"/>
-          <line x1="330" y1="116" x2="330" y2="158" stroke="#e8c46a" stroke-width="2.2"/>
-          <path d="M313,158 Q330,162 347,158" fill="none" stroke="#e8c46a" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="318" y1="126" x2="328" y2="126" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
-          <line x1="318" y1="133" x2="342" y2="133" stroke="#e8c46a" stroke-width="1.5" opacity="0.85"/>
-          <line x1="318" y1="140" x2="328" y2="140" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
-          <line x1="318" y1="147" x2="328" y2="147" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
-          <line x1="332" y1="126" x2="342" y2="126" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
-          <line x1="332" y1="140" x2="342" y2="140" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
-          <line x1="332" y1="147" x2="342" y2="147" stroke="#e8c46a" stroke-width="0.8" opacity="0.7"/>
-          <rect x="336" y="36" width="8" height="16" rx="2" fill="#c9993a"/>
-          <path d="M340,36 Q335,28 337,22 Q340,17 342,22 Q344,17 345,22 Q348,28 340,36Z" fill="url(#fgG)"/>
-        </svg>
+        <img src="logo.png" alt="Rathnam School Logo" style="height:48px;width:auto;object-fit:contain;filter:brightness(1.1)">
         <div class="logo-text" style="color:#fff">Rathnam English Medium<br><span>High School · Yadgir</span></div>
       </div>
-      <p>Building tomorrow's leaders at Hosalli Cross, Yadgir — one student at a time since our founding.</p>
+      <p>Building tomorrow's leaders at Hosalli Cross, Yadgir — fulfilling the vision of Late Dr. M. Rathnam since 2006.</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/share/189Atqcnag/?mibextid=wwXIfr" target="_blank" class="social-btn" title="Facebook">f</a>
         <a href="#" class="social-btn" title="Instagram">📷</a>
-        <a href="https://wa.me/910000000000" class="social-btn" title="WhatsApp">💬</a>
+        <a href="https://wa.me/919535805209" class="social-btn" title="WhatsApp">💬</a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
       <a href="#about">About Us</a>
+      <a href="#founder">Our Founder</a>
       <a href="#facilities">Facilities</a>
       <a href="#admissions">Admissions</a>
       <a href="#testimonials">Parent Reviews</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
-      <p>📞 +91 00000 00000</p>
+      <p>📞 +91 95358 05209</p>
       <p>✉️ office@rathnamschool.com</p>
       <p>📍 Hosalli Cross, Yadgir<br>Karnataka – 585202</p>
     </div>
@@ -511,8 +547,8 @@ footer{background:var(--navy);padding:80px 5% 30px}
 <!-- FLOATING BUTTONS -->
 <div class="float-wrap">
   <a href="#top" class="fb fb-top" id="backToTop" title="Back to top">↑</a>
-  <a href="https://wa.me/910000000000" target="_blank" class="fb fb-wa" title="WhatsApp">💬</a>
-  <a href="tel:+910000000000" class="fb fb-call" title="Call Us">📞</a>
+  <a href="https://wa.me/919535805209" target="_blank" class="fb fb-wa" title="WhatsApp">💬</a>
+  <a href="tel:+919535805209" class="fb fb-call" title="Call Us">📞</a>
 </div>
 
 <!-- MODAL -->
@@ -527,26 +563,19 @@ footer{background:var(--navy);padding:80px 5% 30px}
 </div>
 
 <script>
-// ── NAV SCROLL ──
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{
   nav.classList.toggle('scrolled',window.scrollY>60);
   document.getElementById('backToTop').classList.toggle('show',window.scrollY>400);
 });
-
-// ── PARALLAX HERO ──
 window.addEventListener('scroll',()=>{
   const s=window.scrollY;
   document.getElementById('heroBg').style.transform=`scale(1.1) translateY(${s*0.25}px)`;
 });
-
-// ── REVEAL ON SCROLL ──
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.querySelector('[data-target]'))startCounters(e.target)}});
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// ── COUNTER ANIMATION ──
 function startCounters(wrap){
   wrap.querySelectorAll('[data-target]').forEach(el=>{
     const target=+el.dataset.target,dur=1800,start=performance.now();
@@ -558,13 +587,9 @@ function startCounters(wrap){
     requestAnimationFrame(tick);
   });
 }
-// Add suffix to all stat-nums
 document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
-  const t=+el.dataset.target;
-  el.dataset.suffix = t===95 ? '%' : '+';
+  el.dataset.suffix = +el.dataset.target===95 ? '%' : '+';
 });
-
-// ── MODAL DATA ──
 const modals={
   labs:{icon:'🔬',title:'Science & Technology Labs',desc:'Fully equipped for hands-on discovery and curiosity-driven learning.',list:['Modern Physics, Chemistry & Biology kits','Computer Lab with high-speed fiber internet','Smart boards for interactive visual lessons','Safety-first design with trained lab supervisors']},
   transport:{icon:'🚌',title:'Safe Transport Services',desc:'Peace of mind for parents — every single school day.',list:['CCTV & GPS-tracked school bus fleet','Trained drivers and dedicated bus attendants','Covers all major localities across Yadgir','Emergency SOS alert system for parents']},
@@ -581,21 +606,14 @@ function openModal(k){
 }
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal()});
-
-// ── FORM SUBMIT ──
 document.getElementById('inquiryForm').addEventListener('submit',function(e){
   e.preventDefault();
   const btn=document.getElementById('submitBtn');
   const url='https://script.google.com/macros/s/AKfycbx--_7sOLPYEd_2UF6TG72R-Pge8GcruF7qZ1gAzuH5Gjsf4oW4JrGxzRrblUXyY9u-vA/exec';
-  const payload={
-    name:document.getElementById('parentName').value,
-    phone:document.getElementById('phoneNumber').value,
-    className:document.getElementById('selectedClass').value
-  };
+  const payload={name:document.getElementById('parentName').value,phone:document.getElementById('phoneNumber').value,className:document.getElementById('selectedClass').value};
   btn.textContent='Sending…';btn.disabled=true;
   fetch(url,{method:'POST',mode:'no-cors',cache:'no-cache',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
   .then(()=>{btn.textContent='✓ Sent! Redirecting…';btn.style.background='#22c55e';setTimeout(()=>window.location.href='thank-you.html',1200)})
-  // ✅ Redirects to thank-you.html — make sure file is named exactly: thank-you.html
   .catch(()=>{alert('Submission failed. Please try again or call us directly.');btn.disabled=false;btn.textContent='Get Free Prospectus →'});
 });
 </script>
